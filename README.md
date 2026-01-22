@@ -1,8 +1,9 @@
 # Echocardiography-Analysis
-Using Artificial Intelligence for medical image analysis
+Left Ventricular Volume Estimation from Echocardiographic Segmentation Using Simpson’s Method
 
+This repository provides tools for estimating cardiac chamber volumes from echocardiographic segmentations using a Simpson’s method of disks-based approach. In echocardiography, the volume of the left ventricle (LV) is commonly quantified by dividing the ventricular cavity into a series of thin, stacked cylindrical segments (or disks) and summing their volumes — a technique known as Simpson’s method. This approach is widely adopted because it reduces geometric assumptions about ventricular shape
 
-
+In this project, segmentations of the LV mask obtained from AI segmentation models are processed to compute an approximate three-dimensional volume. The mask is split into a user-defined number of segments perpendicular to a reference axis; each segment’s radius is used to compute the volume of a corresponding cylindrical disk. These disk volumes are then summed to produce a total volume estimate — improving in accuracy as the number of segments increases. This method forms the basis for deriving clinically relevant metrics such as end-diastolic volume, end-systolic volume, and ejection fraction when applied across cardiac phases.
 
 ## 1. Mask Volume Folder
 
